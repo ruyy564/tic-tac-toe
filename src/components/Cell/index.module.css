@@ -1,0 +1,22 @@
+.root {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #C5C6C7;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.root:hover {
+    background-color: #16171d;
+}
+
+.zero {
+    color: #fff;
+}
+
+.cross {
+    color: rgb(160, 21, 184);
+}
