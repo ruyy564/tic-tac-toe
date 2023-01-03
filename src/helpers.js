@@ -10,7 +10,7 @@ export const isFillCells = (cells) => {
   return true;
 };
 
-export const isFinishTheGame = (cells) => {
+export const getWinnerLine = (cells) => {
   if (
     cells[0][0] &&
     cells[0][0] === cells[0][1] &&

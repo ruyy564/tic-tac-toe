@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { isFinishTheGame, isFillCells } from '../../helpers';
+import { getWinnerLine, isFillCells } from '../../helpers';
 import { PLAYERS } from '../../constants';
 
 const initialState = {
@@ -25,8 +25,10 @@ export const gameSlice = createSlice({
 
       if (!state.isFinished && !state.gameBoard[i][j]) {
         state.gameBoard[i][j] = state.currentTurn;
-        if (isFinishTheGame(state.gameBoard)) {
-          state.winnerLine = isFinishTheGame(state.gameBoard);
+        const winnerLine = getWinnerLine(state.gameBoard);
+
+        if (winnerLine) {
+          state.winnerLine = winnerLine;
           state.winnerInfo[state.currentTurn] += 1;
           state.winner = `Winner: ${state.currentTurn}.`;
           state.isFinished = true;
