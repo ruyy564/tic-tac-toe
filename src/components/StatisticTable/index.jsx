@@ -10,7 +10,7 @@ const StatisticTable = ({ winner, winnerInfo, isFinished }) => {
       <div className={css.root}>
         <div>Player 0:{winnerInfo['0']}</div>
         <div>Player X:{winnerInfo['X']}</div>
-        <div>Tie:{winnerInfo['TIE']}</div>
+        <div>Draw:{winnerInfo['DRAW']}</div>
       </div>
     </>
   );

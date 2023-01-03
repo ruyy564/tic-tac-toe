@@ -11,7 +11,7 @@ const initialState = {
     ['', '', ''],
   ],
   isFinished: false,
-  winnerInfo: { [PLAYERS.ZERO]: 0, [PLAYERS.CROSS]: 0, TIE: 0 },
+  winnerInfo: { [PLAYERS.ZERO]: 0, [PLAYERS.CROSS]: 0, DRAW: 0 },
   winner: null,
 };
 
@@ -30,8 +30,8 @@ export const gameSlice = createSlice({
           state.winner = `Winner: ${state.currentTurn}.`;
           state.isFinished = true;
         } else if (isFillCells(state.gameBoard)) {
-          state.winnerInfo.TIE += 1;
-          state.winner = 'Tie';
+          state.winnerInfo.DRAW += 1;
+          state.winner = 'Draw';
           state.isFinished = true;
         }
 
