@@ -9,7 +9,7 @@ const MenuPage = () => {
   return (
     <div className={css.root}>
       <Wrapper>
-        <Link to="/tic-tac-toe/twoplayer">Start game</Link>
+        <Link to="/twoplayer">Start game</Link>
       </Wrapper>
     </div>
   );

@@ -29,7 +29,7 @@ const TwoPlayerGamePage = () => {
         <StatisticTableContainer />
         <div className={css.buttonGroup}>
           <Button clickHandler={clickRestartHandler}>Restart</Button>
-          <Link to="/tic-tac-toe/" clickHandler={clickMenuHandler}>
+          <Link to="/" clickHandler={clickMenuHandler}>
             To menu
           </Link>
         </div>

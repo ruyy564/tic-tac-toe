@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes>
       <Route path="*" element={<MenuPage />} />
-      <Route path="/tic-tac-toe/twoplayer" element={<TwoPlayerGamePage />} />
+      <Route path="/twoplayer" element={<TwoPlayerGamePage />} />
     </Routes>
   );
 }
