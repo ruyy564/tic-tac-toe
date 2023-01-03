@@ -13,6 +13,7 @@ const initialState = {
   isFinished: false,
   winnerInfo: { [PLAYERS.ZERO]: 0, [PLAYERS.CROSS]: 0, DRAW: 0 },
   winner: null,
+  winnerLine: null,
 };
 
 export const gameSlice = createSlice({
@@ -24,8 +25,8 @@ export const gameSlice = createSlice({
 
       if (!state.isFinished && !state.gameBoard[i][j]) {
         state.gameBoard[i][j] = state.currentTurn;
-
         if (isFinishTheGame(state.gameBoard)) {
+          state.winnerLine = isFinishTheGame(state.gameBoard);
           state.winnerInfo[state.currentTurn] += 1;
           state.winner = `Winner: ${state.currentTurn}.`;
           state.isFinished = true;
@@ -47,11 +48,13 @@ export const gameSlice = createSlice({
       state.isFinished = initialState.isFinished;
       state.winnerInfo = initialState.winnerInfo;
       state.winner = initialState.winner;
+      state.winnerLine = initialState.winnerLine;
     },
     continueGame: (state) => {
       state.currentTurn = initialState.currentTurn;
       state.gameBoard = initialState.gameBoard;
       state.isFinished = initialState.isFinished;
+      state.winnerLine = initialState.winnerLine;
     },
   },
 });

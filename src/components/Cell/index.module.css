@@ -23,3 +23,8 @@
 .cross {
     color: #dc5aa9;
 }
+
+.win {
+    font-size: 100px;
+    text-decoration: line-through;
+}

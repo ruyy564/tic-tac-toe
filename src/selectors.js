@@ -3,3 +3,4 @@ export const winnerSelector = (state) => state.game.winner;
 export const winnerInfoSelector = (state) => state.game.winnerInfo;
 export const currentTurnSelector = (state) => state.game.currentTurn;
 export const isFinishedSelector = (state) => state.game.isFinished;
+export const winnerLineSelector = (state) => state.game.winnerLine;
