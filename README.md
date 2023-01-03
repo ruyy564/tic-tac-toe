@@ -1,6 +1,6 @@
 # Tic-tac-toe
 
-## To play this game - https://ruyy564.github.io/twoplayer
+## To play this game - https://ruyy564.github.io/tic-tac-toe/
 
 # Gameplay
 
