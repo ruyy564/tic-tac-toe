@@ -1,4 +1,6 @@
-.root {}
+.root {
+    height: 100%;
+}
 
 .buttonGroup {
     width: 300px;
