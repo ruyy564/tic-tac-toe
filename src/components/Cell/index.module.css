@@ -1,22 +1,25 @@
 .root {
     width: 100px;
     height: 100px;
-    border: 2px solid #C5C6C7;
+    background: none;
     font-size: 50px;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    font-family: 'Inspiration', cursive;
+    border-radius: 50%;
 }
 
-.root:hover {
-    background-color: #16171d;
+.root:active {
+    background-color: #fbfbfb2b;
 }
 
 .zero {
-    color: rgb(74, 54, 162);
+    color: #3dbcd9;
 }
 
 .cross {
-    color: rgb(170, 35, 87);
+    color: #dc5aa9;
 }

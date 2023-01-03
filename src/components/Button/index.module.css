@@ -5,7 +5,7 @@
     cursor: pointer;
 }
 
-.root:hover {
+.root:active {
     color: #0B0C10;
     background-color: #fff;
 }
