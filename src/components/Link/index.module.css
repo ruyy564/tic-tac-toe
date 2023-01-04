@@ -5,7 +5,6 @@
     border: 2px solid var(--secondary);
     color: var(--primary);
     background-color: var(--secondary);
-
 }
 
 .root:active {

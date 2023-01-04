@@ -3,7 +3,6 @@
   --secondary: #fff;
   --board: url(../public/board-wt.png);
   --switch: url(../public/moon.png);
-  --switch-active: rgba(255, 255, 255, 0.564);
 }
 
 [data-theme="light"] {
@@ -11,7 +10,6 @@
   --secondary: #0B0C10;
   --board: url(../public/board.png);
   --switch: url(../public/sun.png);
-  --switch-active: #0b0c1060;
 }
 
 * {

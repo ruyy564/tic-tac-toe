@@ -22,7 +22,7 @@ const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(getTheme());
 
   useEffect(() => {
-    document.getElementById('root').dataset.theme = theme;
+    document.querySelector('html').dataset.theme = theme;
   }, [theme]);
 
   const switchTheme = () => {
