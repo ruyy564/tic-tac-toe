@@ -12,10 +12,6 @@
     border-radius: 50%;
 }
 
-.root:active {
-    background-color: #fbfbfb2b;
-}
-
 .zero {
     color: #3dbcd9;
 }

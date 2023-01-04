@@ -2,8 +2,12 @@
     padding: 15px;
     text-decoration: none;
     border-radius: 25px;
-    border: 2px solid #fff;
-    color: #0B0C10;
-    background-color: #fff;
+    border: 2px solid var(--secondary);
+    color: var(--primary);
+    background-color: var(--secondary);
 
+}
+
+.root:active {
+    opacity: 0.4;
 }

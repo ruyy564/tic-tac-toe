@@ -1,11 +1,11 @@
 .root {
     padding: 15px;
     border-radius: 25px;
-    border: 2px solid #fff;
+    border: 2px solid var(--secondary);
     cursor: pointer;
 }
 
 .root:active {
-    color: #0B0C10;
-    background-color: #fff;
+    color: var(--primary);
+    background-color: var(--secondary);
 }
