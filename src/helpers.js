@@ -1,3 +1,5 @@
+import { THEME, LOCAL_STORAGE_THEME } from './constants';
+
 export const isFillCells = (cells) => {
   for (let i = 0; i < cells.length; i++) {
     for (let j = 0; j < cells[i].length; j++) {
@@ -108,4 +110,15 @@ export const getWinnerLine = (cells) => {
   }
 
   return false;
+};
+
+export const getTheme = () => {
+  let theme = localStorage.getItem(LOCAL_STORAGE_THEME);
+
+  if (!theme) {
+    localStorage.setItem(LOCAL_STORAGE_THEME, THEME.DARK);
+    theme = THEME.DARK;
+  }
+
+  return theme;
 };

@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
-
-import { ThemeContext } from '../../context/ThemeContext';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { restart, continueGame } from '../../store/slices/gameSlice';
+import { finishGame, continueGame } from '../../store/slices/gameSlice';
 
 import Button from '../../components/Button';
 import Link from '../../components/Link';
@@ -15,8 +13,6 @@ import SwitchThemeButton from '../../containers/SwitchThemeButton';
 import css from './index.module.css';
 
 const TwoPlayerGamePage = () => {
-  const theme = useContext(ThemeContext);
-
   const dispatch = useDispatch();
 
   const clickRestartHandler = () => {
@@ -24,11 +20,11 @@ const TwoPlayerGamePage = () => {
   };
 
   const clickMenuHandler = () => {
-    dispatch(restart());
+    dispatch(finishGame());
   };
 
   return (
-    <div className={css.root} data-theme={theme}>
+    <div className={css.root}>
       <Wrapper>
         <GameBoard />
         <StatisticTableContainer />

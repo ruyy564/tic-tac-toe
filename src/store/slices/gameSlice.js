@@ -11,7 +11,7 @@ const initialState = {
     ['', '', ''],
   ],
   isFinished: false,
-  winnerInfo: { [PLAYERS.ZERO]: 0, [PLAYERS.CROSS]: 0, DRAW: 0 },
+  winnerInfo: { [PLAYERS.ZERO]: 0, [PLAYERS.CROSS]: 0, [PLAYERS.DRAW]: 0 },
   winner: null,
   winnerLine: null,
 };
@@ -30,11 +30,11 @@ export const gameSlice = createSlice({
         if (winnerLine) {
           state.winnerLine = winnerLine;
           state.winnerInfo[state.currentTurn] += 1;
-          state.winner = `Winner: ${state.currentTurn}.`;
+          state.winner = `Winner is ${state.currentTurn}.`;
           state.isFinished = true;
         } else if (isFillCells(state.gameBoard)) {
-          state.winnerInfo.DRAW += 1;
-          state.winner = 'Draw';
+          state.winnerInfo[PLAYERS.DRAW] += 1;
+          state.winner = 'The draw.';
           state.isFinished = true;
         }
 
@@ -44,7 +44,7 @@ export const gameSlice = createSlice({
         }
       }
     },
-    restart: (state) => {
+    finishGame: (state) => {
       state.currentTurn = initialState.currentTurn;
       state.gameBoard = initialState.gameBoard;
       state.isFinished = initialState.isFinished;
@@ -61,6 +61,6 @@ export const gameSlice = createSlice({
   },
 });
 
-export const { restart, makeTurn, continueGame } = gameSlice.actions;
+export const { finishGame, makeTurn, continueGame } = gameSlice.actions;
 
 export default gameSlice.reducer;

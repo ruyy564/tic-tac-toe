@@ -1,16 +1,18 @@
 import React from 'react';
 
+import { PLAYERS } from '../../constants';
+
 import css from './index.module.css';
 
 const StatisticTable = ({ winner, winnerInfo, isFinished }) => {
   return (
     <>
-      <div height="100px">{isFinished && `Game is over. ${winner}`}</div>
+      <div>{isFinished && `The game is over. ${winner}`}</div>
 
       <div className={css.root}>
-        <div>Player 0:{winnerInfo['0']}</div>
-        <div>Player X:{winnerInfo['X']}</div>
-        <div>Draw:{winnerInfo['DRAW']}</div>
+        <div>Player 0:{winnerInfo[PLAYERS.ZERO]}</div>
+        <div>Player X:{winnerInfo[PLAYERS.CROSS]}</div>
+        <div>The draw:{winnerInfo[PLAYERS.DRAW]}</div>
       </div>
     </>
   );

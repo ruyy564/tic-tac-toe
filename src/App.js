@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import ThemeProvider from './context/ThemeContext';
+import ThemeProvider from './containers/ThemeProvider';
 import MenuPage from './pages/MenuPage';
 import TwoPlayerGamePage from './pages/TwoPlayerGamePage';
 

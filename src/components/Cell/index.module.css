@@ -13,11 +13,11 @@
 }
 
 .zero {
-    color: #3dbcd9;
+    color: var(--cell-zero);
 }
 
 .cross {
-    color: #dc5aa9;
+    color: var(--cell-cross);
 }
 
 .win {

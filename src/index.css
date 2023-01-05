@@ -3,6 +3,8 @@
   --secondary: #fff;
   --board: url(../public/board-wt.png);
   --switch: url(../public/moon.png);
+  --cell-zero: #3dbcd9;
+  --cell-cross: #dc5aa9;
 }
 
 [data-theme="light"] {
@@ -10,6 +12,8 @@
   --secondary: #0B0C10;
   --board: url(../public/board.png);
   --switch: url(../public/sun.png);
+  --cell-zero: #00d0ff;
+  --cell-cross: #ff0099;
 }
 
 * {
