@@ -34,8 +34,8 @@ const TwoPlayerGamePage = () => {
             To menu
           </Link>
         </div>
-        <SwitchThemeButton />
       </Wrapper>
+      <SwitchThemeButton />
     </div>
   );
 };

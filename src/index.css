@@ -22,11 +22,30 @@
   box-sizing: border-box;
   font-size: 25px;
   font-family: 'Anton', sans-serif;
-  background: var(--primary);
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
   color: var(--secondary);
+  background: var(--primary);
+}
+
+button {
+  color: var(--secondary);
+  background: var(--primary);
 }
 
 #root {
   height: 100vh;
   width: 100vw;
+}
+
+input,
+textarea,
+button,
+select,
+div, span,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
